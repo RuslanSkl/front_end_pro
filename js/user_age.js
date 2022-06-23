@@ -1,16 +1,10 @@
 let userAge = prompt('Please enter your age')
-if (userAge == 1) {
-    alert ('Вам ' + userAge + ' ' + 'рік')
+const digit = userAge % 10
+let year = 'років'
+if (digit == 1 && userAge != 11) {
+    year = 'рік'
 }
-if (userAge == 2) {
-    alert ('Вам ' + userAge + ' ' + 'роки')
+if ((digit == 2 || digit == 3 || digit == 4) && userAge != 12 && userAge != 13 && userAge != 14) {
+    year = 'роки'
 }
-if (userAge == 3) {
-    alert ('Вам ' + userAge + ' ' + 'роки')
-}
-if (userAge == 4) {
-    alert ('Вам ' + userAge + ' ' + 'роки')
-}
-if (userAge > 4) { 
-    alert ('Вам ' + userAge + ' ' + 'років')
-}
+alert('Вам ' + userAge + ' ' + year)
